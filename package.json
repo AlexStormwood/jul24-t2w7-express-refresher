@@ -1,0 +1,35 @@
+{
+  "name": "jul24-t2w7-express-refresher",
+  "version": "1.0.0",
+  "description": "API refresher with auth and users in the database, plus maybe more.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "dev": "cross-env NODE_ENV=development node --watch src/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexStormwood/jul24-t2w7-express-refresher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlexStormwood/jul24-t2w7-express-refresher/issues"
+  },
+  "homepage": "https://github.com/AlexStormwood/jul24-t2w7-express-refresher#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
