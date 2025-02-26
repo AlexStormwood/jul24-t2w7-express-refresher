@@ -5,6 +5,10 @@ const { default: mongoose } = require("mongoose");
 // make an instance of an express server 
 const app = express();
 
+// This allows us to send in JSON body data on our requests!
+app.use(express.json());
+
+
 // configure the server instance with its routes and other middleware and so on
 app.get("/", (request, response) => {
 	response.json({
@@ -26,6 +30,9 @@ app.get("/databaseHealth", (request, response) => {
 		host: databaseHost
 	});
 });
+
+const UserRouter = require("./controllers/UserController");
+app.use("/users", UserRouter);
 
 
 module.exports = {

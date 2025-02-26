@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "JUL24 Express Refresher",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
