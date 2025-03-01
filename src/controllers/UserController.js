@@ -24,6 +24,7 @@ userRouter.post("/", async (request, response) => {
 userRouter.post("/login", async (request, response) => {
 	// Get user's email and password from request
 	let {email, password} = request.body;
+	console.log(request.body);
 
 	// Find the user by their email 
 	let foundUser = await User.findOne({email: email});
