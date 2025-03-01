@@ -62,6 +62,19 @@ userSchema.pre("save", async function (next) {
 });
 
 
+// 1.b Add a "comparePassword" method to the model 
+userSchema.methods.comparePassword = function (passwordToCheck) {
+	// Grab the user salt value 
+	let userSalt = this.salt;
+
+	// Hash and salt the passwordToCheck 
+	let hashedAndSaltedPasswordToCheck = crypto.scryptSync(passwordToCheck, userSalt, 64).toString("hex");
+
+	// Compare the hashed  & salted version of passwordToCheck against the user's password 
+	return this.password == hashedAndSaltedPasswordToCheck;
+}
+
+
 // 2. Make a model using the user schema 
 const User = mongoose.model("User", userSchema);
 
