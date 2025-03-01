@@ -19,7 +19,9 @@ function createJwt(userId, userName, userEmailVerified){
 function verifyJwt(providedJwt){
 	let decodedAndVerifiedData = jsonwebtoken.verify(providedJwt, process.env.JWT_SECRET_KEY);
 
-	let newFreshJwt = createJwt(decodedAndVerifiedData.payload.id, decodedAndVerifiedData.payload.name, decodedAndVerifiedData.payload.emailVerified);
+	console.log(decodedAndVerifiedData);
+
+	let newFreshJwt = createJwt(decodedAndVerifiedData.id, decodedAndVerifiedData.name, decodedAndVerifiedData.emailVerified);
 
 	return {
 		decodedToken: decodedAndVerifiedData,

@@ -35,6 +35,13 @@ const UserRouter = require("./controllers/UserController");
 app.use("/users", UserRouter);
 
 
+app.use((error, request, response, next) => {
+	response.json({
+		message:"Something went wrong!",
+		error: error.message
+	});
+});
+
 module.exports = {
 	app
 }

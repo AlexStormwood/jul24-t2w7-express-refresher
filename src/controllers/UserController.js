@@ -1,6 +1,7 @@
 const express = require("express");
 const { User } = require("../models/UserModel");
 const { createJwt } = require("../utils/jwtFunctions");
+const { routeRequiresValidJwt } = require("../middleware/UserJwtMiddleware");
 const userRouter = express.Router();
 
 userRouter.post("/", async (request, response) => {
@@ -46,6 +47,14 @@ userRouter.post("/login", async (request, response) => {
 			});
 		}
 	}	
+
+});
+
+userRouter.get("/", routeRequiresValidJwt, async (request, response) => {
+
+	response.json({
+		message: request.customData
+	})
 
 });
 

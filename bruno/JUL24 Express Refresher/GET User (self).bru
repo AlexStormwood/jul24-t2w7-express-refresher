@@ -1,0 +1,27 @@
+meta {
+  name: GET User (self)
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:5000/users/
+  body: none
+  auth: bearer
+}
+
+headers {
+  jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzI0NzEwYmRlOWFmYmJlZGIyNTRlYiIsIm5hbWUiOiJBbGV4IiwiZW1haWxWZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc0MDc4NzYxNiwiZXhwIjoxNzQwNzkxMjE2fQ.6CDGFda2HOqBmH5nBeWs9ePNxii6oQqLk0PXsbuv59g
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzI0NzEwYmRlOWFmYmJlZGIyNTRlYiIsIm5hbWUiOiJBbGV4IiwiZW1haWxWZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc0MDc4NzYxNiwiZXhwIjoxNzQwNzkxMjE2fQ.6CDGFda2HOqBmH5nBeWs9ePNxii6oQqLk0PXsbuv59g
+}
+
+body:json {
+  {
+    "name":"Alex",
+    "email":"example1@email.com",
+    "password":"SuperCoolPassword1"
+  }
+}
