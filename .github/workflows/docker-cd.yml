@@ -14,7 +14,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            alexstormwood/jul24-t2w7-express-refresher
+            alexholderdev/jul24-t2w7-express-refresher
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
