@@ -22,4 +22,4 @@ jobs:
       - run: |
           ls -a
           echo "Hello, world!"
-      - run: "Workflow complete, goodbye!"
+      - run: echo "Workflow complete, goodbye!"
