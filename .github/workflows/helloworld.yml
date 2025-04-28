@@ -1,0 +1,25 @@
+# Name visible in the GitHub Actions summary dashboard
+name: Hello world, test workflow!
+
+# Events or triggers that activate this workflow
+on:
+  push: 
+    branches:
+      - "main"
+
+# Define groups of tasks or commands to run in the workflow
+jobs:
+
+  # Define a job with an ID:
+  hello_world:
+
+    # Job has a specific OS
+    runs-on: ubuntu-latest
+
+    # Define the commands that the job will run, one after the other
+    steps:
+      - run: ls
+      - run: |
+          ls -a
+          echo "Hello, world!"
+      - run: "Workflow complete, goodbye!"
