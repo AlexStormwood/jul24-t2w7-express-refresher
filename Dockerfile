@@ -4,7 +4,7 @@ FROM node:alpine
 # Declare environment variables
 ENV NODE_ENV=production
 ENV PORT=5000
-ENV JWT_SECRETY_KEY=oasnfspakgnsolgkhnalfgknhalg
+ENV JWT_SECRET_KEY=oasnfspakgnsolgkhnalfgknhalg
 
 # Declaring a work directory for our own contents to be inserted
 # into the base image
